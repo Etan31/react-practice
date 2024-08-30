@@ -6,9 +6,16 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### 
+### Run on local
    ```bash
    npm run start
+   ```
+
+### To update
+   ```bash
+   npm i
+   npm update
+   npm audit fix --force
    ```
 
 
