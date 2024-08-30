@@ -4,13 +4,20 @@ const cors = require("cors");
 const pool = require("./db");
 
 //middleware
+// app.use(cors());
 app.use(cors());
 app.use(express.json()); //req.body
+
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
+});
+
+
 
 //ROUTES//
 
 //create a todo
-
 app.post("/todos", async (req, res) => {
   try {
     const { description } = req.body;
@@ -26,7 +33,6 @@ app.post("/todos", async (req, res) => {
 });
 
 //get all todos
-
 app.get("/todos", async (req, res) => {
   try {
     const allTodos = await pool.query("SELECT * FROM todo");
@@ -37,7 +43,6 @@ app.get("/todos", async (req, res) => {
 });
 
 //get a todo
-
 app.get("/todos/:id", async (req, res) => {
   try {
     const { id } = req.params;
@@ -52,7 +57,6 @@ app.get("/todos/:id", async (req, res) => {
 });
 
 //update a todo
-
 app.put("/todos/:id", async (req, res) => {
   try {
     const { id } = req.params;
