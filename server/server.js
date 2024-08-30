@@ -19,16 +19,8 @@ app.get('/numbers', (req, res) => {
       result += 'divisible by five';
     }
 
-    if (number % 3 === 0 && number % 5 === 0) {
-      if (result) result += ' ';
-      result += 'divisible by three and five';
-    }
-
-
     return result || number;
   });
-
-   console.log('Generated numbers:', numbers);
   res.json(numbers);
 });
 
