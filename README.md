@@ -7,9 +7,21 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 In the project directory, you can run:
 
 ### Run on local
-   ```bash
-   npm run start
-   ```
+```bash
+cd client
+```
+   #### Run the client side
+      ```bash
+      npm run start
+      ```
+
+```bash
+cd ../server
+```
+   #### Run the server side
+      ```bash
+      node server.js
+      ```
 
 ### To update
    ```bash

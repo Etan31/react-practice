@@ -1,19 +1,11 @@
-const express = require("express");
+const express = require('express');
+const cors = require('cors');
 const app = express();
-const cors = require("cors");
+const port = 5000;
 const pool = require("./db");
 
-//middleware
-// app.use(cors());
 app.use(cors());
-app.use(express.json()); //req.body
-
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).send('Something broke!');
-});
-
-
+app.use(express.json()); 
 
 //ROUTES//
 
@@ -32,15 +24,18 @@ app.post("/todos", async (req, res) => {
   }
 });
 
+
 //get all todos
 app.get("/todos", async (req, res) => {
   try {
     const allTodos = await pool.query("SELECT * FROM todo");
     res.json(allTodos.rows);
   } catch (err) {
-    console.error(err.message);
+    console.error("Error fetching todos:", err.message);
+    res.status(500).json({ error: "Failed to fetch todos" });
   }
 });
+
 
 //get a todo
 app.get("/todos/:id", async (req, res) => {
@@ -86,6 +81,6 @@ app.delete("/todos/:id", async (req, res) => {
   }
 });
 
-app.listen(5000, () => {
-  console.log("server has started on port 5000");
+app.listen(port, () => {
+  console.log(`Server running on http://localhost:${port}`);
 });

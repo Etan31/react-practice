@@ -21,7 +21,7 @@ const ListTodos = () => {
 
   const getTodos = async () => {
     try {
-      const response = await fetch("http://localhost:5000/todos");
+      const response = await fetch("http://localhost:5000todos");
       const jsonData = await response.json();
 
       setTodos(jsonData);
@@ -68,7 +68,7 @@ const ListTodos = () => {
                 </button>
               </td>
             </tr>
-          ))}
+          ))} 
         </tbody>
       </table>
     </Fragment>
