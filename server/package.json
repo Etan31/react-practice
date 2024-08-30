@@ -1,20 +1,15 @@
 {
-  "name": "server",
+  "name": "interview",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "react-scripts start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "henry",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "pg": "^7.18.2",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
-    "react-scripts": "^5.0.1"
+    "express": "^4.19.2"
   }
 }

@@ -1,20 +1,33 @@
-import React, { Fragment } from "react";
-import "./App.css";
-
-//components
-
-import InputTodo from "./components/InputTodo";
-import ListTodos from "./components/ListTodos";
+import React, { useEffect, useState } from 'react';
 
 function App() {
+  const [numbers, setNumbers] = useState([]);
+
+  const getTodos = async () => {
+    try {
+      const response = await fetch("http://localhost:5000/numbers");
+      const jsonData = await response.json();
+
+      setNumbers(jsonData);
+    } catch (err) {
+      console.error(err.message);
+    }
+  };
+
+  useEffect(() => {
+    getTodos();
+  }, []);
+
   return (
-    <Fragment>
-      <div className="container">
-        <InputTodo />
-        <ListTodos />
-      </div>
-    </Fragment>
+    <div>
+      <h1>Numbers List</h1>
+      <ul>
+        {numbers.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+    </div>
   );
-}
+};
 
 export default App;
