@@ -20,7 +20,7 @@ function App() {
 
 const getDescription = async () => {
   try {
-    const response = await fetch('http://localhost:5500/todos1');
+    const response = await fetch('http://localhost:5500/todos');
     if (!response.ok) {
       console.error(`Server responded with a status: ${response.status}`);
       const errorText = await response.text();
