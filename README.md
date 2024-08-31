@@ -16,10 +16,6 @@ cd client
 ```bash
 cd ../server
 ```
-   #### Run the server side
-      ```bash
-      node server.js
-      ```
 
 ### To update
    ```bash
