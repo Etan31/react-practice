@@ -11,9 +11,9 @@ In the project directory, you can run:
 cd client
 ```
    #### Run the client side
-      ```bash
-      npm run start
-      ```
+   ```bash
+   npm run start
+   ```
 
 ```bash
 cd ../server
