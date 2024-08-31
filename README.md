@@ -1,4 +1,4 @@
-# This porject is uses CRUD method to practice react
+# This project is uses CRUD method to practice react
 
 ## Available Scripts
 
