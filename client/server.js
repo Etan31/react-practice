@@ -1,15 +1,14 @@
 const express = require('express');
 const cors = require('cors');
+const { Pool } = require('pg');
 const app = express();
 const port = 5000;
-const pool = require("./db");
-
+const pool = require('./db')
+// Middleware setup
 app.use(cors());
-app.use(express.json()); 
+app.use(express.json());
 
-//ROUTES//
 
-//create a todo
 app.post("/todos", async (req, res) => {
   try {
     const { description } = req.body;
@@ -24,8 +23,6 @@ app.post("/todos", async (req, res) => {
   }
 });
 
-
-//get all todos
 app.get("/todos", async (req, res) => {
   try {
     const allTodos = await pool.query("SELECT * FROM todo");
@@ -80,6 +77,8 @@ app.delete("/todos/:id", async (req, res) => {
     console.log(err.message);
   }
 });
+
+
 
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
