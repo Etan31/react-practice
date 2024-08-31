@@ -21,7 +21,7 @@ const ListTodos = () => {
 
   const getTodos = async () => {
     try {
-      const response = await fetch("http://localhost:5000todos");
+      const response = await fetch("http://localhost:5000/todos");
       const jsonData = await response.json();
 
       setTodos(jsonData);
@@ -34,12 +34,10 @@ const ListTodos = () => {
     getTodos();
   }, []);
 
-  console.log(todos);
-
   return (
     <Fragment>
       {" "}
-      <table className="table mt-5 text-center">
+      <table className="table-list">
         <thead>
           <tr>
             <th>Description</th>
@@ -48,11 +46,6 @@ const ListTodos = () => {
           </tr>
         </thead>
         <tbody>
-          {/*<tr>
-            <td>John</td>
-            <td>Doe</td>
-            <td>john@example.com</td>
-          </tr> */}
           {todos.map(todo => (
             <tr key={todo.todo_id}>
               <td>{todo.description}</td>
@@ -61,7 +54,7 @@ const ListTodos = () => {
               </td>
               <td>
                 <button
-                  className="btn btn-danger"
+                  className="btn-delete"
                   onClick={() => deleteTodo(todo.todo_id)}
                 >
                   Delete

@@ -11,7 +11,7 @@ const InputTodo = () => {
          const body = { description };
 
          // This will fetch the data inside the body which is the description.
-         const response = await fetch("http://localhost:3000/todos", {
+         const response = await fetch("http://localhost:5000/todos", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(body)
