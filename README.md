@@ -1,6 +1,4 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# This project is uses CRUD method to practice react
 
 ## Available Scripts
 
@@ -11,9 +9,9 @@ In the project directory, you can run:
 cd client
 ```
    #### Run the client side
-      ```bash
-      npm run start
-      ```
+   ```bash
+   npm run start
+   ```
 
 ```bash
 cd ../server
