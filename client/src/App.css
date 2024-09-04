@@ -9,6 +9,12 @@
    --highlight2:  rgb(71, 38, 8);
 }
 
+
+.interviewBtn{
+   
+}
+
+
 .container {
    display:flex;
    flex-direction: column;
