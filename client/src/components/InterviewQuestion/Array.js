@@ -22,9 +22,9 @@ function Arrayfile() {
   return (
     <div>
       <h2>Interview Practice</h2>
-         {arrays.map((numbers, index)=> (
+         {arrays.map((numbers,index) => (
             <tr key={index}>
-              <td>{numbers}</td>
+               <td>{numbers}</td>
             </tr>
          ))}
     </div>
