@@ -80,13 +80,10 @@ app.delete("/todos/:id", async (req, res) => {
 
 
 // Interview routes
-// app.get('/interview', (req, res) => {
-//   res.sendFile(path.join(__dirname, 'public', 'interview.html'));
-// });
-
-// app.get('/interview', (req, res) => {
-//   res.sendFile(path.join(__dirname, 'src', 'components', 'InterviewQuestion', 'Array.js'))
-// })
+app.get('/Array', async (req, res) => {
+  const numbers = [1, 2, 3, 4, 5];
+  res.json(numbers);
+});
 
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
