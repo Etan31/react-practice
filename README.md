@@ -12,15 +12,11 @@ cd client
    ```bash
    npm run start
    ```
-
-```bash
-cd ../server
-```
    #### Run the server side
-      ```bash
-      node server.js
-      ```
-
+   ```bash
+   nodemon server.js
+   ```
+   
 ### To update
    ```bash
    npm i
