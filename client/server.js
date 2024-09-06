@@ -82,10 +82,13 @@ app.delete("/todos/:id", async (req, res) => {
 // Interview routes
 app.get('/Array', async (req, res) => {
   const numbers = [1, 2, 3, 4, 5];
+  const word = 'Hello';
+  const words = 'Hello World';
+  const arrayString = ['H', 'e', 'l', 'l', 'o']; 
 
-  for(let i=1; i<6; i++ ) {
-    console.log(i);
-  } 
+  // for(let i=1; i<6; i++ ) {
+  //   console.log(i);
+  // } 
 
 
 
