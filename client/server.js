@@ -9,6 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 
+// create todo
 app.post("/todos", async (req, res) => {
   try {
     const { description } = req.body;
@@ -23,6 +24,7 @@ app.post("/todos", async (req, res) => {
   }
 });
 
+// select all todo
 app.get("/todos", async (req, res) => {
   try {
     const allTodos = await pool.query("SELECT * FROM todo");
@@ -32,7 +34,6 @@ app.get("/todos", async (req, res) => {
     res.status(500).json({ error: "Failed to fetch todos" });
   }
 });
-
 
 //get a todo
 app.get("/todos/:id", async (req, res) => {
@@ -65,7 +66,6 @@ app.put("/todos/:id", async (req, res) => {
 });
 
 //delete a todo
-
 app.delete("/todos/:id", async (req, res) => {
   try {
     const { id } = req.params;
@@ -79,6 +79,21 @@ app.delete("/todos/:id", async (req, res) => {
 });
 
 
+// Interview routes
+app.get('/Array', async (req, res) => {
+  const numbers = [1, 2, 3, 4, 5];
+  const word = 'Hello';
+  const words = 'Hello World';
+  const arrayString = ['H', 'e', 'l', 'l', 'o']; 
+
+  // for(let i=1; i<6; i++ ) {
+  //   console.log(i);
+  // } 
+
+
+
+  res.json(numbers);
+});
 
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);

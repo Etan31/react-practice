@@ -9,6 +9,12 @@
    --highlight2:  rgb(71, 38, 8);
 }
 
+
+.interviewBtn{
+   
+}
+
+
 .container {
    display:flex;
    flex-direction: column;
@@ -58,3 +64,11 @@ form.form-inputTodo > button {
    color: var(--highlight2);
 }
 
+table.table-list {
+    border-collapse: separate;
+    border-spacing: 0 16px;
+}
+
+.td-edit > .modal {
+   display: none;
+}
