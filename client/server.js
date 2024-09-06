@@ -86,9 +86,9 @@ app.get('/Array', async (req, res) => {
   const words = 'Hello World';
   const arrayString = ['H', 'e', 'l', 'l', 'o']; 
 
-  for(let i=1; i<6; i++ ) {
-    console.log(i);
-  } 
+  // for(let i=1; i<6; i++ ) {
+  //   console.log(i);
+  // } 
 
 
 
