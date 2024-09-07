@@ -85,11 +85,11 @@ app.get('/Array', async (req, res) => {
   const word = 'Hello';
   const words = 'Hello World';
   const arrayString = ['H', 'e', 'l', 'l', 'o']; 
+  let fruits = ['banana', 'apple', 'orange', 'mango'];
 
-  // for(let i=1; i<6; i++ ) {
-  //   console.log(i);
-  // } 
-
+  function addWord(fruit) {
+    fruits.push(fruit);
+  }
 
 
   res.json(numbers);
